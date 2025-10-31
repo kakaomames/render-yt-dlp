@@ -1328,101 +1328,30 @@
 	<div id="app" data-v-app="">
 		<div data-v-5d9447fb="" class="container px-0 px-sm-2-3 mt-4">
 			<div data-v-5d9447fb="" class="card">
-				<form data-v-a619d1ee="" data-v-5d9447fb="" id="form" class="card-body px-sm-5">
+				<form data-v-a619d1ee="" data-v-5d9447fb="" id="form" class="card-body px-sm-5" action="/get_download_link" method="POST">
 					<p data-v-a619d1ee="" class="mt-3 mb-1 text-muted">
 						<b data-v-a619d1ee="">動画の URL :</b>
 					</p>
 					<div data-v-a619d1ee="" class="input-group mb-3">
-						<input data-v-a619d1ee="" type="url" class="form-control" placeholder="ここに動画の URL を入力してください" required="" autocomplete="off">
-						<!---->
+						<input data-v-a619d1ee="" type="url" class="form-control" placeholder="ここに動画の URL を入力してください" required="" autocomplete="off" name="url">
 					</div>
 					<p data-v-a619d1ee="" class="mb-1 text-muted">
 						<b data-v-a619d1ee="">ファイル名 :</b>
 					</p>
 					<div data-v-a619d1ee="" class="input-group mb-3">
-						<input data-v-a619d1ee="" type="text" class="form-control" placeholder="ここにファイル名を入力してください" autocomplete="off">
+						<input data-v-a619d1ee="" type="text" class="form-control" placeholder="ここにファイル名を入力してください" autocomplete="off" name="filename">
 					</div>
 					<p data-v-a619d1ee="" class="mb-1 text-muted">
 						<b data-v-a619d1ee="">フォーマット :</b>
-				    </p>
-					<div data-v-a619d1ee="" class="input-group mb-3">
-						<select data-v-a619d1ee="" class="custom-select">
-							<option value="m4a" data-v-a619d1ee="">音声 (M4A形式: MP3形式よりも音質に優れており非常に高速、多くのプレイヤーで再生できる)</option>
-							<option value="mp3" data-v-a619d1ee="">音声 (MP3形式: 元動画より音質が劣化する割に変換負荷が高くて遅いので、なるべくM4A形式を推奨)</option>
-							<option value="opus" data-v-a619d1ee="">音声 (Opus形式)</option>
-							<option value="wav" data-v-a619d1ee="">音声 (WAV形式)</option>
-							<option value="mp4" data-v-a619d1ee="">動画 (MP4形式・元画質)</option>
-							<option value="mp4-1080p" data-v-a619d1ee="">動画 (MP4形式・1080p)</option>
-							<option value="mp4-720p" data-v-a619d1ee="">動画 (MP4形式・720p)</option>
-							<option value="mp4-540p" data-v-a619d1ee="">動画 (MP4形式・540p)</option>
-							<option value="mp4-480p" data-v-a619d1ee="">動画 (MP4形式・480p)</option>
-							<option value="mp4-360p" data-v-a619d1ee="">動画 (MP4形式・360p)</option>
-							<option value="webm" data-v-a619d1ee="">動画 (WebM形式・4K対応)</option>
-							<option value="etc" data-v-a619d1ee="">動画 (その他の形式)</option>
-						</select>
-					</div>
-					<div data-v-a619d1ee="" id="tips" class="alert alert-info" role="alert">動画ファイルの標準的なフォーマットです。ダウンロード可能な一番高い画質でダウンロードします。</div>
-					<p data-v-a619d1ee="" class="mb-1 text-muted">
-						<b data-v-a619d1ee="">優先高速変換チケット (シリアルコード)
-							<a data-v-a619d1ee="" href="https://ytmp3modoki.fanbox.cc/posts/10707817" target="_blank">(2025/10/09更新)</a>:
-						</b>
 					</p>
 					<div data-v-a619d1ee="" class="input-group mb-3">
-						<input data-v-a619d1ee="" type="text" class="form-control" id="serial_key" placeholder="シリアルコードを入力してください" autocomplete="off"></div>
-					<div data-v-a619d1ee="" class="feedback text-muted msmall mt-1"> 確実に高速にダウンロード・変換したい方向けに、<a data-v-a619d1ee="" href="https://ytmp3modoki.fanbox.cc" target="_blank">FANBOX 支援者の方には限定記事にて「優先高速変換チケット」のシリアルコードを公開しています！</a>
-						<br data-v-a619d1ee=""> チケットをお持ちの方は、より確実にダウンロードできる専用サーバーに接続し、混雑時でも高速にダウンロードできます。 </div>
-					<h3 data-v-a619d1ee="" class="msmall mt-4 mb-3">
-						<i data-v-a619d1ee="" class="fas fa-cog"></i>オプション
-					</h3>
-					<div data-v-a619d1ee="" class="custom-control custom-checkbox msmall mb-2">
-						<input data-v-a619d1ee="" type="checkbox" class="custom-control-input" id="checkbox_embedthumb" disabled="">
-						<label data-v-a619d1ee="" class="custom-control-label" for="checkbox_embedthumb"> 音声ファイルに動画のサムネイルを埋め込む 
-							<div data-v-a619d1ee="" class="feedback text-muted msmall"> 変換先の形式が MP3 形式・M4A 形式・Opus 形式 の場合のみ適用されます。それ以外の形式を指定した状態でチェックしても何も起こりません。 </div>
-						</label>
-					</div>
-					<div data-v-a619d1ee="" class="custom-control custom-checkbox msmall mb-2">
-						<input data-v-a619d1ee="" type="checkbox" class="custom-control-input" id="checkbox_useav1">
-						<label data-v-a619d1ee="" class="custom-control-label" for="checkbox_useav1"> 映像コーデックが AV1 or VP9 の動画ファイルがあれば優先的にダウンロードする 
-							<div data-v-a619d1ee="" class="feedback text-muted msmall"> AV1 / VP9 は新しい映像コーデックで、特に長時間の動画では H.264 (AVC) よりも高画質な上、ファイルサイズを大幅に削減できます。
-								<br data-v-a619d1ee=""> ただし、現状再生できるプレイヤーやソフトが限られます。とにかく一番高画質でダウンロードしたい方におすすめです。
-								<br data-v-a619d1ee=""> YouTube では、映像コーデック: AV1 or VP9 / 音声コーデック: Opus が入った MP4 or WebM ファイルが生成されます。
-								<br data-v-a619d1ee=""> YouTube 動画の変換に失敗する際は、この設定をオフにしてから再度試すと正常に変換できる場合があります。 
-							</div>
-						</label>
-					</div>
-					<div data-v-a619d1ee="" class="custom-control custom-checkbox msmall mb-2">
-						<input data-v-a619d1ee="" type="checkbox" class="custom-control-input" id="checkbox_playsound">
-						<label data-v-a619d1ee="" class="custom-control-label" for="checkbox_playsound"> 変換完了後にサウンドを鳴らしてお知らせする 
-							<div data-v-a619d1ee="" class="feedback text-muted msmall"> 変換に時間のかかる長い動画や、変換中に他のページを見ている時でもサウンドで変換完了を把握できて便利です。
-							</div>
-						</label>
-					</div>
-					<div data-v-a619d1ee="" class="custom-control custom-checkbox msmall mb-2">
-						<input data-v-a619d1ee="" type="checkbox" class="custom-control-input" id="checkbox_information">
-						<label data-v-a619d1ee="" class="custom-control-label" for="checkbox_information"> 変換時の詳細情報を表示する <div data-v-a619d1ee="" class="feedback text-muted msmall"> ダウンロード・変換時のログなどを表示するモードです。変換に失敗した時に確認してみてください。 </div>
-						</label>
-					</div>
-					<div data-v-a619d1ee="" class="custom-control custom-checkbox msmall mb-4">
-						<input data-v-a619d1ee="" type="checkbox" class="custom-control-input" id="checkbox_range">
-						<label data-v-a619d1ee="" class="custom-control-label" for="checkbox_range"> 変換する範囲を指定する <div data-v-a619d1ee="" class="feedback text-muted msmall"> 開始時間・終了時間どちらかを省くと、動画の最初・最後からそれぞれ切り取ります。<br data-v-a619d1ee=""> 動画を再エンコードを行わずに切り取る仕様のため、指定された秒数よりも±数秒ずれることがあります。<br data-v-a619d1ee=""></div>
-						</label>
-						<div data-v-a619d1ee="" class="form-range mt-3 hide">
-							<div data-v-a619d1ee="" class="input-group">
-								<div data-v-a619d1ee="" class="input-group-prepend">
-									<div data-v-a619d1ee="" class="input-group-text">開始時間</div>
-								</div>
-								<input data-v-a619d1ee="" type="text" class="form-control" placeholder="時間:分:秒 (例: 00:01:23)" pattern="^([0-9]{2,}):([0-9]{2}):([0-9]{2})$" autocomplete="off"></div>
-							<div data-v-a619d1ee="" class="input-group">
-								<div data-v-a619d1ee="" class="input-group-prepend">
-									<div data-v-a619d1ee="" class="input-group-text">終了時間</div>
-								</div>
-								<input data-v-a619d1ee="" type="text" class="form-control" placeholder="時間:分:秒 (例: 00:04:56)" pattern="^([0-9]{2,}):([0-9]{2}):([0-9]{2})$" autocomplete="off">
-							</div>
-						</div>
+						<select data-v-a619d1ee="" class="custom-select" name="format"> 
+							<option value="mp4" data-v-a619d1ee="">動画 (MP4形式・itag:18)</option>
+						</select>
 					</div>
 					<div data-v-a619d1ee="" class="d-flex justify-content-center mb-1">
 						<button data-v-a619d1ee="" id="submit" type="submit" class="btn btn-ytmp3">
-							<i data-v-a619d1ee="" class="fas fa-video"></i>変換開始
+							<i data-v-a619d1ee="" class="fas fa-video"></i>変換開始❗️
 						</button>
 					</div>
 				</form>
