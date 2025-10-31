@@ -28,10 +28,16 @@ def index():
     return render_template('index.html')
 
 @app.route('/home')
-def index():
+def home():
     """index.html をレンダリングするエンドポイント"""
     # 実際には templates/index.html が必要です
     return render_template('home.html')
+
+@app.route('/YouTubeMP3modoki/')
+def YouTubeMP3modoki():
+    """index.html をレンダリングするエンドポイント"""
+    # 実際には templates/index.html が必要です
+    return render_template('YouTubeMP3modoki.html')
 # ----------------------------------------------------
 ## 🩺 ヘルスチェックエンドポイント
 # ----------------------------------------------------
